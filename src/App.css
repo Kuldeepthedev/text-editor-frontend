@@ -1,38 +1,260 @@
-.App {
-  text-align: center;
+.Editor{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, 10%);
+    max-width: 80%;
+    margin-top: 50px;
+    background-color: rgb(247, 244, 244);
+    border: none;
+    outline: none;
+    height: max-content;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    min-height: 750px;
+    
+}
+.ql-toolbar {
+    position: sticky;
+    background-color: white;
+    top: 0px;
+    z-index: 999999;
+    margin-top: -32px;
+
+}
+.open_file{
+    width: 300px;
+    position: absolute;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%,-50%);
+    z-index: 99999999999999999999;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+    height: 250px;
+}
+.open_file form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.open_file button{
+    height: 40px;
+    background-color: orangered;
+    border: none;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.open_file input{
+    height: 40px;
+}
+.create-file{
+    width: 300px;
+    position: absolute;
+    top: -50%;
+    left: 50%;
+    
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+    height: 250px;
+}
+.create-file form{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    gap: 20px;
+}
+.create-file form input{
+    height: 40px;
+}
+.create-file form input:focus{
+    border: 2px solid orangered;
+    outline: none;
+}
+.create-file form button{
+    height: 40px;
+    background-color: orangered;
+    border: none;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+}
+.create-file form button:hover{
+    background-color: rgb(245, 92, 36);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+.close-tab{
+    height: 30px;
+    width: 30px;
+    border-radius: 10px;
+    position: relative;
+    left: 90%;
+    top: 5%;
+    background-color: orangered;
+    border: none;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+}
+.create_btn{
+      height: 50px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 50px;
+      text-align: center;
+      align-items: center;
+      font-size: 50px;
+      background-color: rgb(255, 255, 255);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+}
+.files_all{
+    position: relative;
+    top: -150px;
+
+}
+.files_all li{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+.home_style{
+    
+    z-index: 9999999;
+}
+.create_new_file{
+    width: 100px;
+    height: 10px;
+    /* margin-top: 50px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.files_all_get{
+    position: relative;
+    left: 50px;
+    top: 30px;
+}
+.file_model{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+.file_model .close{
+    
+    position: relative;
+    left: -15px;
+    top: 5px;
+}
+@media only screen and (max-width: 689px) {
+       .files_all ul{
+        flex-direction: column;
+       }
+}
+@media only screen and (max-width: 445px) {
+    .files_all ul{
+     margin-left: 90px;
+    }
+}
+@media only screen and (max-width: 320px) {
+    .files_all ul{
+     margin-left: 150px;
+    }
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+.prfoile{
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    width: 105px;
+    
+    height: 250px;
+    position: sticky;
+    z-index: 999999999;
+    top: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    margin-left: -10px;
+    padding-left: 25px;
+    border-radius: 10px;
+    color: black;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.prfoile button{
+    background-color: orangered;
+    padding: 5px 10px;
+    border: none;
+    color: white;
+    cursor: pointer;
 }
-
-.App-link {
-  color: #61dafb;
+.file_model span{
+    width: 10px;
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    position: absolute;
+    left: -45px;
+    top: 25px;
+    position: relative;
+    right: 0;
+    background-color: orangered;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.file_open{
+    width: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+    height: 250px;
+}
+.create_new_file h1{
+    font-size: 14px;
+    position: relative;
+    top: 60px;
+    left: -90px;
+}
+.files_all {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.files_all ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 35px;
+    padding: 50px;
+}
+.file_style{
+    height: 200px;
+    width: 200px;
+    
+}
+.file_style img{
+    width: 200px;
+    height: 180px;
 }

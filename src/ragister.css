@@ -1,0 +1,94 @@
+.login_form{
+    width: 100%;
+    height: 450px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.user_sign_up_in{
+    width: 50px;
+    height: 50px;
+}
+.otp_button{
+    width: 150px !important;
+}
+.Ragis_form{
+    width: 100%;
+    height: 780px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.login{
+    width: 30%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+    gap:10px;
+    align-items: center;
+    border: 1px solid gray;
+}
+@media screen and (max-width: 886px){
+    .login{
+        width: 70%;
+    }
+    .login_form{
+        margin-top: 100px;
+    }
+    .Ragis_form{
+        margin-top: 100px;
+    }
+}
+@media screen and (max-width: 540px){
+        .login{
+            width: 90%;
+        }
+        form a{
+            left: -80px !important;
+        }
+}
+form a{
+    color: black;
+    font-size: 13px;
+    position: relative;
+    left: 100px;
+}
+.login button{
+    width: 80%;
+    background-color: orangered;
+    padding: 10px 30px;
+    border: none;
+    color: white;
+}
+.login form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.login button{
+     cursor: pointer;
+}
+.login button a{
+    color: white;
+}
+.login h2{
+    width: 100%;
+    height: 60px;
+    font-size: 26px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: orangered;
+}
+.login input{
+    height: 50px;
+    width: 80%;
+}
